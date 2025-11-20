@@ -1,0 +1,149 @@
+/* Importa a fonte 'Orbitron' do Google Fonts, que tem um estilo futurista/gamer. */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Define variáveis CSS globais dentro do seletor :root para reutilização */
+:root {
+  --cor-fundo-gradiente: linear-gradient(135deg, #1a0a24, #000000); /* Fundo mais escuro, com um tom de roxo. */
+  --cor-texto: aliceblue; /* Variável para a cor principal do texto. */
+  --cor-neon-principal: #00f5ff; /* Ciano neon como cor de destaque. */
+  --cor-neon-secundaria: #ff00ff; /* Magenta neon para detalhes. */
+  --cor-link-hover: #ffffff; /* Branco para o hover do link, para maior contraste. */
+  --fonte-principal: 'Orbitron', sans-serif; /* Variável para a família de fontes gamer. */
+}
+
+/* Estilização geral do corpo da página */
+body {
+    background: var(--cor-fundo-gradiente); /* Aplica o gradiente de fundo usando a variável. */
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa enquanto a página é rolada. */
+
+    color: var(--cor-texto); /* Define a cor do texto padrão usando a variável. */
+    font-family: var(--fonte-principal); /* Define a fonte padrão usando a variável. */
+    font-weight: 400; /* Peso de fonte padrão para a Orbitron. */
+
+    /* Usa Flexbox para criar um layout de "sticky footer". */
+    display: flex; /* Ativa o layout Flexbox. */
+    flex-direction: column; /* Organiza os itens flex (container e footer) em uma coluna. */
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela. */
+    align-items: center; /* Centraliza o conteúdo horizontalmente. */
+    margin: 0; /* Remove as margens padrão do navegador. */
+    text-align: center; /* Centraliza o texto dentro de todos os elementos filhos. */
+}
+
+/* Container com efeito de vidro */
+.container {
+    flex-grow: 1; /* Faz o container ocupar todo o espaço vertical disponível, empurrando o footer para baixo. */
+    background: rgba(10, 20, 30, 0.6); /* Fundo mais escuro e semi-transparente. */
+    backdrop-filter: blur(8px); /* Aplica um desfoque no que está atrás do container, criando um efeito de vidro sutil. */
+    -webkit-backdrop-filter: blur(8px); /* Garante compatibilidade do backdrop-filter com o navegador Safari. */
+    padding: 2rem 3rem; /* Adiciona espaçamento interno. */
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3); /* Adiciona uma sombra sutil para um efeito de brilho neon. */
+    width: 90%; /* Faz o container ocupar 90% da largura disponível. */
+    max-width: 800px; /* Limita a largura máxima do container em telas grandes. */
+    border-radius: 0; /* Mantém os cantos retos para um visual moderno. */
+    margin-top: 2rem; /* Adiciona margem superior para espaçamento do topo da página. */
+    margin-bottom: 2rem; /* Adiciona margem inferior para espaçamento do rodapé. */
+}
+
+/* Estilização para o título principal */
+h1 {
+    font-weight: 700; /* Deixa a fonte do título em negrito. */
+    font-size: 2.5rem; /* Define o tamanho da fonte do título. */
+    margin-bottom: 1rem; /* Adiciona uma margem na parte inferior do título. */
+    text-shadow: 0 0 5px var(--cor-neon-principal), 0 0 10px var(--cor-neon-principal); /* Adiciona um brilho neon ao texto do título. */
+    letter-spacing: 3px; /* Adiciona espaçamento entre as letras para um visual tecnológico. */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas. */
+}
+
+/* Estilização para parágrafos */
+p {
+    font-size: 1.1rem; /* Define o tamanho da fonte dos parágrafos. */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade. */
+}
+
+/* Estilização para a div que contém a busca */
+.busca {
+    display: flex; /* Usa Flexbox para alinhar o input e o botão. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    gap: 10px; /* Cria um espaço de 10px entre o input e o botão. */
+    margin: 2rem 0; /* Adiciona margem vertical para espaçamento. */
+}
+
+/* Estilização para o campo de texto */
+input[type="text"] {
+    width: 60%; /* Define a largura do campo de texto. */
+    padding: 10px; /* Adiciona espaçamento interno. */
+    border: none; /* Remove a borda. */
+    border-radius: 0; /* Cantos retos. */
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo semi-transparente sutil. */
+    color: var(--cor-texto); /* Define a cor do texto digitado. */
+    font-family: var(--fonte-principal); /* Usa a fonte principal definida nas variáveis. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    transition: all 0.3s ease; /* Transição suave para o foco. */
+    box-shadow: inset 0 0 5px rgba(0, 245, 255, 0.2); /* Adiciona um brilho interno sutil. */
+}
+
+/* Efeito de brilho quando o campo de texto está em foco */
+input[type="text"]:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    box-shadow: 0 0 15px var(--cor-neon-principal); /* Adiciona um brilho mais forte ao focar. */
+}
+
+/* Estilização para o texto de placeholder do input */
+input[type="text"]::placeholder {
+    color: var(--cor-neon-principal); /* Placeholder na cor neon. */
+    opacity: 0.6; /* Deixa o placeholder um pouco transparente. */
+}
+
+/* Estilização geral para botões */
+button {
+    padding: 10px 20px; /* Adiciona espaçamento interno. */
+    border: none; /* Remove a borda. */
+    border-radius: 0; /* Cantos retos. */
+    background-color: var(--cor-neon-principal); /* Define a cor de fundo do botão como neon principal. */
+    color: #000; /* Define a cor do texto do botão como preto para contraste. */
+    font-family: var(--fonte-principal); /* Usa a fonte principal. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar sobre o botão. */
+    transition: all 0.3s ease; /* Cria uma transição suave para todas as propriedades. */
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas. */
+    box-shadow: 0 0 10px var(--cor-neon-principal); /* Adiciona um brilho inicial ao botão. */
+}
+
+/* Estilização para o botão quando o mouse está sobre ele */
+button:hover {
+    background-color: var(--cor-neon-secundaria); /* Altera a cor de fundo para o neon secundário. */
+    color: var(--cor-texto); /* Muda a cor do texto para a cor principal. */
+    box-shadow: 0 0 20px var(--cor-neon-secundaria); /* Adiciona um brilho mais intenso ao redor do botão. */
+}
+
+/* Estilização para links (tags <a>) */
+a {
+    color: var(--cor-texto); /* Define a cor do link. */
+    text-decoration: none; /* Remove a linha sublinhada padrão dos links. */
+    transition: color 0.3s ease; /* Cria uma transição suave para a mudança de cor. */
+}
+
+/* Estilização para o link quando o mouse está sobre ele */
+a:hover {
+    color: var(--cor-link-hover); /* Altera a cor do link usando a variável. */
+    text-decoration: underline; /* Adiciona um sublinhado para melhor feedback visual e acessibilidade. */
+}
+
+/* Estilização do rodapé */
+footer {
+    width: 90%; /* Garante que o rodapé ocupe a mesma largura que o container. */
+    max-width: 800px; /* Limita a largura máxima do rodapé. */
+    padding-top: 1rem; /* Adiciona um espaçamento interno no topo. */
+    padding-bottom: 1rem; /* Adiciona um espaçamento interno na parte inferior. */
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3); /* Adiciona um brilho neon sutil. */
+    margin-top: 2rem; /* Adiciona uma margem no topo para separar do container. */
+}
+
+/* Estilização para a lista não ordenada (ul) dentro do rodapé */
+footer ul {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    padding: 0; /* Remove o preenchimento padrão da lista. */
+    display: flex; /* Alinha os itens da lista (os links) em uma linha. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 20px; /* Adiciona um espaço de 20px entre cada link. */
+}
