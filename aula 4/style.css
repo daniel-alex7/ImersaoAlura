@@ -1,0 +1,145 @@
+/* Importa a fonte 'Orbitron' do Google Fonts, que tem um estilo futurista/gamer. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Define variáveis CSS globais dentro do seletor :root para reutilização */
+:root {
+  --cor-fundo: #121212; /* Fundo escuro e sólido para um visual minimalista. */
+  --cor-container: #1e1e1e; /* Cor do container ligeiramente mais clara que o fundo. */
+  --cor-texto: #e0e0e0; /* Cor de texto principal, um branco suave. */
+  --cor-texto-secundario: #a0a0a0; /* Cor para textos de menor importância. */
+  --cor-destaque: #bb86fc; /* Um tom de roxo suave como cor de destaque criativa. */
+  --fonte-principal: 'Poppins', sans-serif; /* Fonte moderna e limpa. */
+}
+
+/* Estilização geral do corpo da página */
+body {
+    background: var(--cor-fundo); /* Aplica o fundo escuro sólido. */
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa enquanto a página é rolada. */
+
+    color: var(--cor-texto); /* Define a cor do texto padrão usando a variável. */
+    font-family: var(--fonte-principal); /* Define a fonte padrão usando a variável. */
+    font-weight: 300; /* Peso de fonte mais leve para um visual elegante. */
+
+    /* Usa Flexbox para criar um layout de "sticky footer". */
+    display: flex; /* Ativa o layout Flexbox. */
+    flex-direction: column; /* Organiza os itens flex (container e footer) em uma coluna. */
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela. */
+    align-items: center; /* Centraliza o conteúdo horizontalmente. */
+    margin: 0; /* Remove as margens padrão do navegador. */
+    text-align: center; /* Centraliza o texto dentro de todos os elementos filhos. */
+}
+
+/* Container com efeito de vidro */
+.container {
+    flex-grow: 1; /* Faz o container ocupar todo o espaço vertical disponível, empurrando o footer para baixo. */
+    background: var(--cor-container); /* Fundo do container. */
+    padding: 2rem 3rem; /* Adiciona espaçamento interno. */
+    border: 1px solid #333; /* Borda sutil para definir o container. */
+    width: 90%; /* Faz o container ocupar 90% da largura disponível. */
+    max-width: 800px; /* Limita a largura máxima do container em telas grandes. */
+    border-radius: 8px; /* Cantos levemente arredondados para um visual mais suave. */
+    margin-top: 2rem; /* Adiciona margem superior para espaçamento do topo da página. */
+    margin-bottom: 2rem; /* Adiciona margem inferior para espaçamento do rodapé. */
+}
+
+/* Estilização para o título principal */
+h1 {
+    font-weight: 600; /* Deixa a fonte do título em negrito. */
+    font-size: 2.5rem; /* Define o tamanho da fonte do título. */
+    margin-bottom: 1rem; /* Adiciona uma margem na parte inferior do título. */
+    color: var(--cor-destaque); /* Usa a cor de destaque para o título. */
+    letter-spacing: 1px; /* Espaçamento sutil entre as letras. */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas. */
+}
+
+/* Estilização para parágrafos */
+p {
+    font-size: 1.1rem; /* Define o tamanho da fonte dos parágrafos. */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade. */
+    font-weight: 400;
+}
+
+/* Estilização para a div que contém a busca */
+.busca {
+    display: flex; /* Usa Flexbox para alinhar o input e o botão. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    gap: 10px; /* Cria um espaço de 10px entre o input e o botão. */
+    margin: 2rem 0; /* Adiciona margem vertical para espaçamento. */
+}
+
+/* Estilização para o campo de texto */
+input[type="text"] {
+    width: 60%; /* Define a largura do campo de texto. */
+    padding: 10px; /* Adiciona espaçamento interno. */
+    border: none; /* Remove a borda. */
+    border-bottom: 2px solid #444; /* Apenas uma borda inferior. */
+    border-radius: 0;
+    background-color: transparent; /* Fundo transparente. */
+    color: var(--cor-texto); /* Define a cor do texto digitado. */
+    font-family: var(--fonte-principal); /* Usa a fonte principal definida nas variáveis. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    transition: all 0.3s ease; /* Transição suave para o foco. */
+}
+
+/* Efeito de brilho quando o campo de texto está em foco */
+input[type="text"]:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-bottom-color: var(--cor-destaque); /* Muda a cor da borda inferior ao focar. */
+}
+
+/* Estilização para o texto de placeholder do input */
+input[type="text"]::placeholder {
+    color: var(--cor-texto-secundario); /* Placeholder com a cor de texto secundária. */
+}
+
+/* Estilização geral para botões */
+button {
+    padding: 10px 20px; /* Adiciona espaçamento interno. */
+    border: 1px solid var(--cor-destaque); /* Borda na cor de destaque. */
+    border-radius: 4px; /* Cantos levemente arredondados. */
+    background-color: transparent; /* Fundo transparente. */
+    color: var(--cor-destaque); /* Cor do texto igual à da borda. */
+    font-family: var(--fonte-principal); /* Usa a fonte principal. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    font-weight: 400;
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar sobre o botão. */
+    transition: all 0.3s ease; /* Cria uma transição suave para todas as propriedades. */
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas. */
+}
+
+/* Estilização para o botão quando o mouse está sobre ele */
+button:hover {
+    background-color: var(--cor-destaque); /* Preenche o fundo com a cor de destaque. */
+    color: var(--cor-fundo); /* Muda a cor do texto para a cor de fundo para contraste. */
+}
+
+/* Estilização para links (tags <a>) */
+a {
+    color: var(--cor-texto); /* Define a cor do link. */
+    text-decoration: none; /* Remove a linha sublinhada padrão dos links. */
+    transition: color 0.3s ease; /* Cria uma transição suave para a mudança de cor. */
+}
+
+/* Estilização para o link quando o mouse está sobre ele */
+a:hover {
+    color: var(--cor-destaque); /* Altera a cor do link para a cor de destaque. */
+    text-decoration: underline; /* Adiciona um sublinhado para melhor feedback visual e acessibilidade. */
+}
+
+/* Estilização do rodapé */
+footer {
+    width: 90%; /* Garante que o rodapé ocupe a mesma largura que o container. */
+    max-width: 800px; /* Limita a largura máxima do rodapé. */
+    padding-top: 1rem; /* Adiciona um espaçamento interno no topo. */
+    border-top: 1px solid #333; /* Linha sutil para separar o rodapé. */
+    margin-top: 2rem; /* Adiciona uma margem no topo para separar do container. */
+}
+
+/* Estilização para a lista não ordenada (ul) dentro do rodapé */
+footer ul {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    padding: 0; /* Remove o preenchimento padrão da lista. */
+    display: flex; /* Alinha os itens da lista (os links) em uma linha. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 20px; /* Adiciona um espaço de 20px entre cada link. */
+}
