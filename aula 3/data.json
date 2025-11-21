@@ -1,0 +1,46 @@
+
+
+[{
+    "nome" : "JavaScript",
+    "descricao" : "Uma linguagem da web",
+    "ano": 1995,
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+},
+
+{
+    "nome" : "Python",
+    "descricao" : "Uma linguagem versátil e de alto nível.",
+    "ano": 1991,
+    "link": "https://docs.python.org/pt-br/3/"
+},
+
+{
+    "nome" : "Java",
+    "descricao" : "Linguagem orientada a objetos e independente de plataforma.",
+    "ano": 1995,
+    "link": "https://docs.oracle.com/en/java/"
+},
+
+{
+    "nome" : "C#",
+    "descricao" : "Linguagem moderna e orientada a objetos da Microsoft.",
+    "ano": 2000,
+    "link": "https://learn.microsoft.com/pt-br/dotnet/csharp/"
+},
+
+{
+    "nome" : "PHP",
+    "descricao" : "Linguagem de script popular para desenvolvimento web.",
+    "ano": 1995,
+    "link": "https://www.php.net/manual/pt_BR/"
+},
+
+{
+    "nome" : "Ruby",
+    "descricao" : "Linguagem dinâmica e de código aberto com foco na simplicidade.",
+    "ano": 1995,
+    "link": "https://www.ruby-lang.org/pt/documentation/"
+}
+
+
+]
